@@ -1,7 +1,7 @@
 import cv2
 
 cap = cv2.VideoCapture(0)
-# 0 is 1st devic like web camera, second device will be 1, third device will be 2
+# 0 is 1st device like web camera, second device will be 1, third device will be 2
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 # foourcc is video file format
 out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))
