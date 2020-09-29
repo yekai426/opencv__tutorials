@@ -3,6 +3,7 @@ import cv2
 img = cv2.imread('lena.jpg', -1)
 # 1 is to load color image, 0 is to load grayimage, -1 is to load unchanged image
 cv2.imshow('image', img)
+# 'image' is window name
 k = cv2.waitKey(0) & 0xFF
 
 if k == 27:
