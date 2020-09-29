@@ -5,6 +5,7 @@ img = cv2.imread('lena.jpg', -1)
 cv2.imshow('image', img)
 # 'image' is window name
 k = cv2.waitKey(0) & 0xFF
+# 0xFF is mask used for 64 bits OS
 
 if k == 27:
   # 27 is escape key
