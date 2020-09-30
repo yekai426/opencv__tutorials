@@ -7,9 +7,11 @@ cap.set(3, 3000)
 # 3 is width
 cap.set(4, 3000)
 # 4 is height
+# video capture will use camera maximum resolution - width and height
 
 print(cap.get(3))
 print(cap.get(4))
+
 while(cap.isOpened()):
     ret, frame = cap.read()
     if ret == True:
