@@ -3,10 +3,15 @@ import numpy as np
 
 img = cv.imread('gradient.png',0)
 _, th1 = cv.threshold(img, 50, 255, cv.THRESH_BINARY)
+# If image color is less than 50, image color is 0. Otherwise, if image color is greater than 50, image color is 255.
 _, th2 = cv.threshold(img, 200, 255, cv.THRESH_BINARY_INV)
+# If image color is less than 200, image color is 255. Otherwise, if image color is greater than 200, image color is 0.
 _, th3 = cv.threshold(img, 127, 255, cv.THRESH_TRUNC)
+# If image color is less than 127, image color is unchanges. Otherwise, if image color is greater than 127, image color is 127.
 _, th4 = cv.threshold(img, 127, 255, cv.THRESH_TOZERO)
+# If image color is less than 127, image color is 0. Otherwise, if image color is greater than 127, image color is unchanged.
 _, th5 = cv.threshold(img, 127, 255, cv.THRESH_TOZERO_INV)
+# If image color is less than 127, image color is unchanged. Otherwise, if image color is greater than 127, image color is 0.
 
 
 cv.imshow("Image", img)
