@@ -17,7 +17,7 @@ closing = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernal)
 mg = cv2.morphologyEx(mask, cv2.MORPH_GRADIENT, kernal)
 # morph gradient is difference between dilation and erosion
 th = cv2.morphologyEx(mask, cv2.MORPH_TOPHAT, kernal)
-# tophat is difference between image and opening
+# tophat is difference between input image and opening of image
 
 titles = ['image', 'mask', 'dilation', 'erosion', 'opening', 'closing', 'mg', 'th']
 images = [img, mask, dilation, erosion, opening, closing, mg, th]
