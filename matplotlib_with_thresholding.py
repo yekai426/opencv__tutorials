@@ -14,7 +14,7 @@ images = [img, th1, th2, th3, th4, th5]
 
 for i in range(6):
     plt.subplot(2, 3, i+1), plt.imshow(images[i], 'gray')
-    # 2 is the number of rows, 3 is the number of columns
+    # 2 is the number of rows, 3 is the number of columns, i+1 is index
     plt.title(titles[i])
     plt.xticks([]), plt.yticks([])
 
