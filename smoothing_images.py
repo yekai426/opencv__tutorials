@@ -7,10 +7,15 @@ img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 kernel = np.ones((5, 5), np.float32)/25
 dst = cv2.filter2D(img, -1, kernel)
+# homogeneous blur method
 blur = cv2.blur(img, (5, 5))
+# blur or average method, (5, 5) is kernel
 gblur = cv2.GaussianBlur(img, (5, 5), 0)
+# Gaussian blur method, (5, 5) is kernel
 median = cv2.medianBlur(img, 5)
+# Median blur method
 bilateralFilter = cv2.bilateralFilter(img, 9, 75, 75)
+# BilaterFilter method keep edge sharp
 
 titles = ['image', '2D Convolution', 'blur', 'GaussianBlur', 'median', 'bilateralFilter']
 images = [img, dst, blur, gblur, median, bilateralFilter]
