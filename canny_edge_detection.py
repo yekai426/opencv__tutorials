@@ -14,7 +14,7 @@ from matplotlib import pyplot as plt
 img = cv2.imread("lena.jpg")
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 canny = cv2.Canny(img, 100, 200)
-#100 is threshold 1, 200 is threshold 2
+#Canny edge detection. 100 is threshold 1, 200 is threshold 2
 
 titles = ['image', 'canny']
 images = [img, canny]
