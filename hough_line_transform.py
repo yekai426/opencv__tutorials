@@ -14,7 +14,7 @@ cv2.imshow('edges', edges)
 lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
 
 for line in lines:
-    rho,theta = line[0]
+    rho, theta = line[0]
     a = np.cos(theta)
     b = np.sin(theta)
     x0 = a * rho
