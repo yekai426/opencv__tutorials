@@ -49,6 +49,7 @@ for apple_lap, orange_lap in zip(lp_apple, lp_orange):
     cols, rows, ch = apple_lap.shape
     laplacian = np.hstack((apple_lap[:, 0:int(cols/2)], orange_lap[:, int(cols/2):]))
     apple_orange_pyramid.append(laplacian)
+
 # now reconstruct
 apple_orange_reconstruct = apple_orange_pyramid[0]
 for i in range(1, 6):
