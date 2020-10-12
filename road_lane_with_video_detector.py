@@ -35,7 +35,7 @@ def process(image):
     gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     canny_image = cv2.Canny(gray_image, 100, 120)
     cropped_image = region_of_interest(canny_image,
-                    np.array([region_of_interest_vertices], np.int32),)
+                    np.array([region_of_interest_vertices], np.int32))
     lines = cv2.HoughLinesP(cropped_image,
                             rho=2,
                             theta=np.pi/180,
