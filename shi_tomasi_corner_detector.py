@@ -12,6 +12,7 @@ corners = cv.goodFeaturesToTrack(gray, 100, 0.01, 10)
 # 100 is maximum number of corners to detect
 
 corners = np.int0(corners)
+#int0 is 64 bits integer
 
 for i in corners:
     x, y = i.ravel()
